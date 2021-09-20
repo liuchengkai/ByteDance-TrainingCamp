@@ -1,1 +1,10 @@
-console.log('hello world')
+#!/usr/bin/env node
+const program = require('commander')
+program.version(require('../package').version)
+program.command('init <name>')
+	.description('init project')
+	.action(require('../lib/init.js'))
+program.command('refresh')
+	.description('Refresh routers.')
+	.action(require('../lib/refresh'))
+program.parse(process.argv)
