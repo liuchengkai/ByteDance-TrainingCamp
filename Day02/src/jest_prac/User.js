@@ -1,0 +1,13 @@
+module.exports = class User{
+	constructor(name){
+		this.name = name
+	}
+
+	getName(name){
+		return this.name
+	}
+
+	setName(){
+		this.name = name
+	}
+}
